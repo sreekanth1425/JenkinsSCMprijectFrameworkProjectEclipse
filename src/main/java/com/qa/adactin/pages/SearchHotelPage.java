@@ -32,61 +32,76 @@ public class SearchHotelPage extends TestBase {
 	WebElement searchHotelHeading;
 	@FindBy(xpath = "//input[@id='username_show']")
 	WebElement helloUserMsg;
-	
+
 //	2.initialize the page factory
 	public SearchHotelPage() {
 		PageFactory.initElements(driver, this);
 	}
 //	3.Actions/methods/functions
-	
-	
+
 	public String validateSearchHotelPageTitle() {
 		return driver.getTitle();
 	}
-	
+
 	public boolean validateWelcomeGreetingMsg() {
 		return helloUserMsg.isDisplayed();
 	}
-	
-	
-	//gpt validation for dropdown
-	 public List<String> getLocationDropdownOptions() {
-	        Select dropdown = new Select(locationDropDown);
-	        List<WebElement> optionElements = dropdown.getOptions();
-	        List<String> options = new ArrayList<>();
-	        for (WebElement element : optionElements) {
-	            options.add(element.getText());
-	        }
-	        return options;
-	    }
-	 public List<String> getHotelsDropdownOptions() {
-	        Select dropdown = new Select(hotelsDropDown);
-	        List<WebElement> optionElements = dropdown.getOptions();
-	        List<String> options = new ArrayList<>();
-	        for (WebElement element : optionElements) {
-	            options.add(element.getText());
-	        }
-	        return options;
-	    }
-	 public List<String> getRoomTypeDropdownOptions() {
-	        Select dropdown = new Select(roomTypeDropDown);
-	        List<WebElement> optionElements = dropdown.getOptions();
-	        List<String> options = new ArrayList<>();
-	        for (WebElement element : optionElements) {
-	            options.add(element.getText());
-	        }
-	        return options;
-	    }
-	 public List<String> getNumOfRoomsDropdownOptions() {
-	        Select dropdown = new Select(numberOfRoomsDropDown);
-	        List<WebElement> optionElements = dropdown.getOptions();
-	        List<String> options = new ArrayList<>();
-	        for (WebElement element : optionElements) {
-	            options.add(element.getText());
-	        }
-	        return options;
-	    }
-	
-	
+
+	// gpt validation for dropdown
+	public List<String> getLocationDropdownOptions() {
+		Select dropdown = new Select(locationDropDown);
+		List<WebElement> optionElements = dropdown.getOptions();
+		List<String> options = new ArrayList<>();
+		for (WebElement element : optionElements) {
+			options.add(element.getText());
+		}
+		return options;
+	}
+
+	public List<String> getHotelsDropdownOptions() {
+		Select dropdown = new Select(hotelsDropDown);
+		List<WebElement> optionElements = dropdown.getOptions();
+		List<String> options = new ArrayList<>();
+		for (WebElement element : optionElements) {
+			options.add(element.getText());
+		}
+		return options;
+	}
+
+	public List<String> getRoomTypeDropdownOptions() {
+		Select dropdown = new Select(roomTypeDropDown);
+		List<WebElement> optionElements = dropdown.getOptions();
+		List<String> options = new ArrayList<>();
+		for (WebElement element : optionElements) {
+			options.add(element.getText());
+		}
+		return options;
+	}
+//	 public List<String> getNumOfRoomsDropdownOptions() {
+//	        Select dropdown = new Select(numberOfRoomsDropDown);
+//	        List<WebElement> optionElements = dropdown.getOptions();
+////	        dropdown.se
+//	        List<String> options = new ArrayList<>();
+//	        for (WebElement element : optionElements) {
+//	            options.add(element.getText());
+//	        }
+//	        return options;
+//	    }
+
+	public void selectOptionByVisibleText(String value) {
+		Select dropdown = new Select(numberOfRoomsDropDown);
+		dropdown.selectByVisibleText(value);
+		;
+	}
+
+	public List<WebElement> getDropdownOptions() {
+		Select dropdown = new Select(numberOfRoomsDropDown);
+		return dropdown.getOptions();
+	}
+
+	public String getSelectedOptionText() {
+		Select dropdown = new Select(numberOfRoomsDropDown);
+		return dropdown.getFirstSelectedOption().getText();
+	}
 
 }

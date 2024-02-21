@@ -2,20 +2,20 @@
 <testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-20T15:03:15 IST" name="Default suite" finished-at="2024-02-20T15:03:23 IST" duration-ms="7448">
+  <suite started-at="2024-02-20T15:59:44 IST" name="Default suite" finished-at="2024-02-20T16:00:01 IST" duration-ms="16611">
     <groups>
     </groups>
-    <test started-at="2024-02-20T15:03:15 IST" name="Default test" finished-at="2024-02-20T15:03:23 IST" duration-ms="7448">
+    <test started-at="2024-02-20T15:59:44 IST" name="Default test" finished-at="2024-02-20T16:00:01 IST" duration-ms="16611">
       <class name="com.qa.tests.SearchHotelPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.tests.SearchHotelPageTest@1e0b4072]" started-at="2024-02-20T15:03:16 IST" name="setUp" finished-at="2024-02-20T15:03:23 IST" duration-ms="7088" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.tests.SearchHotelPageTest@791f145a]" started-at="2024-02-20T15:59:44 IST" name="setUp" finished-at="2024-02-20T15:59:50 IST" duration-ms="6082" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testRoomTypeDropdownOptions()[pri:0, instance:com.qa.tests.SearchHotelPageTest@1e0b4072]" started-at="2024-02-20T15:03:23 IST" name="testRoomTypeDropdownOptions" finished-at="2024-02-20T15:03:23 IST" duration-ms="165" status="PASS">
+        <test-method signature="testDropdownSelection()[pri:0, instance:com.qa.tests.SearchHotelPageTest@791f145a]" started-at="2024-02-20T15:59:50 IST" name="testDropdownSelection" finished-at="2024-02-20T16:00:01 IST" duration-ms="10328" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRoomTypeDropdownOptions -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.SearchHotelPageTest@1e0b4072]" started-at="2024-02-20T15:03:23 IST" name="tearDown" finished-at="2024-02-20T15:03:23 IST" duration-ms="132" status="PASS">
+        </test-method> <!-- testDropdownSelection -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.tests.SearchHotelPageTest@791f145a]" started-at="2024-02-20T16:00:01 IST" name="tearDown" finished-at="2024-02-20T16:00:01 IST" duration-ms="149" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

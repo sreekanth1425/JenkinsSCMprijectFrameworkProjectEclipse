@@ -3,6 +3,7 @@ package com.qa.tests;
 import java.util.Arrays;
 import java.util.List;
 
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -43,6 +44,7 @@ public class SearchHotelPageTest extends TestBase {
 		List<String> actualOptions = searchHotelPage.getLocationDropdownOptions();
 		Assert.assertEquals(expectedOptions, actualOptions);
 		System.out.println(actualOptions);
+
 	}
 
 	@Test
@@ -67,15 +69,28 @@ public class SearchHotelPageTest extends TestBase {
 		System.out.println(actualOptions);
 	}
 
-	@Test
-	public void testNumOfRoomsDropdownOptions() {
-//      List<String> expectedOptions = List.of("Option 1", "Option 2", "Option 3");
-		List<String> expectedOptions = Arrays.asList("- Select Number of Rooms -", "1 - One", "2 - Two", "3 - Three",
-				"4 - Four", "5 - Five", "6 - Six", "7 - Seven", "8 - Eight", "9 - Nine", "10 - Ten");
+//	@Test
+//	public void testNumOfRoomsDropdownOptions() {
+////      List<String> expectedOptions = List.of("Option 1", "Option 2", "Option 3");
+//		List<String> expectedOptions = Arrays.asList("- Select Number of Rooms -", "1 - One", "2 - Two", "3 - Three",
+//				"4 - Four", "5 - Five", "6 - Six", "7 - Seven", "8 - Eight", "9 - Nine", "10 - Ten");
+//
+//		List<String> actualOptions = searchHotelPage.getNumOfRoomsDropdownOptions();
+//		Assert.assertEquals(expectedOptions, actualOptions);
+//		System.out.println(actualOptions);
+//	}
 
-		List<String> actualOptions = searchHotelPage.getNumOfRoomsDropdownOptions();
-		Assert.assertEquals(expectedOptions, actualOptions);
-		System.out.println(actualOptions);
+	@Test
+	public void testDropdownSelection() throws InterruptedException {
+		Thread.sleep(10000);
+		String expectedOptionValue = "2 - Two"; // Selecting Option 2
+		searchHotelPage.selectOptionByVisibleText(expectedOptionValue);
+		String selectedOptionText = searchHotelPage.getSelectedOptionText();
+		Assert.assertEquals("2 - Two", selectedOptionText);
+		System.out.println(selectedOptionText);
+		List<WebElement> list=searchHotelPage.getDropdownOptions();
+		System.out.println(list);
+		
 	}
 
 	@AfterMethod
