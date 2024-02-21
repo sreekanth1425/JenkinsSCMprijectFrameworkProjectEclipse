@@ -34,7 +34,7 @@ public class SearchHotelPageTest extends TestBase {
 		System.out.println("search hotel test");
 	}
 
-	// gpt test methods
+	// gpt test methods--Feb20--2024
 	@Test
 	public void testLocDropdownOptions() {
 //        List<String> expectedOptions = List.of("Option 1", "Option 2", "Option 3");
