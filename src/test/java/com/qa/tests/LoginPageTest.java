@@ -23,7 +23,7 @@ public class LoginPageTest extends TestBase {
 		super();
 
 	}
-
+//     Adactin Application
 	@BeforeTest
 	public void setUp() {
 		initialization();
